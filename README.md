@@ -1,6 +1,6 @@
 # Cricket Data Engineering Lakehouse
 
-## Project Overview 🏏
+## Project Overview
 
 This project establishes a robust data engineering platform for cricket data using Azure Databricks and Azure Data Lake Storage (ADLS). The goal is to build a scalable, efficient, and well-governed lakehouse architecture that can handle both batch and streaming data. The project utilizes a Medallion Architecture to progressively refine raw data into structured, ready-for-analysis datasets, providing a solid foundation for analytics, machine learning, and data science. I am building this project to showcase my skills and learning in modern data engineering practices, with the ultimate goal of creating a great cricket data analysis project.
 
@@ -12,7 +12,7 @@ The project follows the Medallion Architecture, organizing data into three disti
 2. <b>Silver Layer (Delta)</b>: The raw JSON data is read from the Bronze layer, transformed, and flattened into a set of normalized Delta tables. This layer contains clean, structured data, optimized for downstream processing and analysis. The data is partitioned by `season` to improve query performance.
 3. <b>Gold Layer (Future State)</b>: The Silver-level tables can be used to build aggregated, business-ready tables for specific use cases (e.g., player performance metrics, team statistics). This layer is not part of the current notebook but represents the next logical step in the pipeline.
 
-## Ingestion Notebook (`ingestions.ipynb`)
+## Ingestion Notebook [(`ingestions.ipynb`)](https://github.com/Kushh37/Cricket-Data-Engineering-Lakehouse/blob/main/ingestions.ipynb)
 
 The core of this project is the `ingestions.ipynb` notebook, which automates the following key steps:
 
